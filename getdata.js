@@ -66,15 +66,19 @@ Promise.resolve().then(function () { return require('node-fetch'); }).then(funct
     }
     function displayData() {
         return __awaiter(this, void 0, void 0, function () {
-            var apiUrl1, apiUrl2, response1, data1, response2, data2, error_2;
+            var apiUrl1, apiUrl2, apiUrl3, apiUrl4, apiUrl5, apiUrl6, response1, data1, response2, data2, response3, data3, response4, data4, response5, data5, response6, data6, error_2;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         apiUrl1 = 'https://strobelightprojects.github.io/wdd130/atlantis/index.html';
-                        apiUrl2 = 'https://strobelightprojects.github.io/wdd130/wwr/site-plan-rafting.html';
+                        apiUrl2 = 'https://strobelightprojects.github.io/wdd130/atlantis/eye.html';
+                        apiUrl3 = 'https://strobelightprojects.github.io/wdd130/atlantis/cyprus.html';
+                        apiUrl4 = 'https://strobelightprojects.github.io/wdd130/atlantis/contact.html';
+                        apiUrl5 = 'https://strobelightprojects.github.io/wdd130/wwr/';
+                        apiUrl6 = 'https://strobelightprojects.github.io/wdd130/wwr/faq.html';
                         _a.label = 1;
                     case 1:
-                        _a.trys.push([1, 10, , 11]);
+                        _a.trys.push([1, 26, , 27]);
                         return [4 /*yield*/, fetchData(apiUrl1)];
                     case 2:
                         response1 = _a.sent();
@@ -82,10 +86,10 @@ Promise.resolve().then(function () { return require('node-fetch'); }).then(funct
                         return [4 /*yield*/, response1.text()];
                     case 3:
                         data1 = _a.sent();
-                        console.log('Fetched data from first URL:', data1);
+                        console.log('Fetched data from first URL:', data1); // success 
                         return [3 /*break*/, 5];
                     case 4:
-                        console.log('Failed to fetch data from first URL:', response1.status);
+                        console.log('Failed to fetch data from first URL:', response1.status); // failed 
                         _a.label = 5;
                     case 5: return [4 /*yield*/, fetchData(apiUrl2)];
                     case 6:
@@ -94,23 +98,71 @@ Promise.resolve().then(function () { return require('node-fetch'); }).then(funct
                         return [4 /*yield*/, response2.text()];
                     case 7:
                         data2 = _a.sent();
-                        console.log('Fetched data from second URL:', data2);
+                        console.log('Fetched data from second URL:', data2); //succes
                         return [3 /*break*/, 9];
                     case 8:
-                        console.log('Failed to fetch data from second URL:', response2.status);
+                        console.log('Failed to fetch data from second URL:', response2.status); //failed 
                         _a.label = 9;
-                    case 9: return [3 /*break*/, 11];
+                    case 9: return [4 /*yield*/, fetchData(apiUrl3)];
                     case 10:
+                        response3 = _a.sent();
+                        if (!response3.ok) return [3 /*break*/, 12];
+                        return [4 /*yield*/, response3.text()];
+                    case 11:
+                        data3 = _a.sent();
+                        console.log('Fetched data from third URL:', data3); //success
+                        return [3 /*break*/, 13];
+                    case 12:
+                        console.log('Failed to fetch data from third URL:', response3.status); //failed 
+                        _a.label = 13;
+                    case 13: return [4 /*yield*/, fetchData(apiUrl4)];
+                    case 14:
+                        response4 = _a.sent();
+                        if (!response4.ok) return [3 /*break*/, 16];
+                        return [4 /*yield*/, response4.text()];
+                    case 15:
+                        data4 = _a.sent();
+                        console.log('Fetched data from fourth URL:', data4); //success
+                        return [3 /*break*/, 17];
+                    case 16:
+                        console.log('Failed to fetch data from fourth URL:', response4.status); //failed 
+                        _a.label = 17;
+                    case 17: return [4 /*yield*/, fetchData(apiUrl5)];
+                    case 18:
+                        response5 = _a.sent();
+                        if (!response5.ok) return [3 /*break*/, 20];
+                        return [4 /*yield*/, response5.text()];
+                    case 19:
+                        data5 = _a.sent();
+                        console.log('Fetched data from fourth URL:', data5); //success
+                        return [3 /*break*/, 21];
+                    case 20:
+                        console.log('Failed to fetch data from fourth URL:', response4.status); //failed 
+                        _a.label = 21;
+                    case 21: return [4 /*yield*/, fetchData(apiUrl6)];
+                    case 22:
+                        response6 = _a.sent();
+                        if (!response6.ok) return [3 /*break*/, 24];
+                        return [4 /*yield*/, response6.text()];
+                    case 23:
+                        data6 = _a.sent();
+                        console.log('Fetched data from fourth URL:', data6); //success
+                        return [3 /*break*/, 25];
+                    case 24:
+                        console.log('Failed to fetch data from fourth URL:', response4.status); //failed 
+                        _a.label = 25;
+                    case 25: return [3 /*break*/, 27];
+                    case 26:
                         error_2 = _a.sent();
                         console.error('Error:', error_2);
-                        return [3 /*break*/, 11];
-                    case 11: return [2 /*return*/];
+                        return [3 /*break*/, 27];
+                    case 27: return [2 /*return*/];
                 }
             });
         });
     }
-    // Run the example
+    // Run the program
     displayData();
 }).catch(function (error) {
-    console.error('Error loading node-fetch:', error);
+    console.error('Error loading node-fetch:', error); //throwing and handling exceptions
 });
