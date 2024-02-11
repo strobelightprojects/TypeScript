@@ -14,6 +14,6 @@ I created this software to begin working with TypeScript. In this project I crea
 
 # Future Work
 
-- change it so it pulls usefull information instead of just the html of old projects. 
+- Change it so it pulls usefull information instead of just the html of old projects. 
 - Figure out node and see if i need to keep Node_modules file and also the Package-lock.json file. 
 - Add in ES lint and fix all the problems with the code. 
