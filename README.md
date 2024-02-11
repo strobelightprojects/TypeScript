@@ -1,12 +1,5 @@
 # Overview
-I created this software to 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
-
-{Provide a description of the software that you wrote to demonstrate the TypeScript language.}
-
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
+I created this software to begin working with TypeScript. In this project I created a a fetching function to retrieve the html off of a website. I ended up pulling html from 2 former website projects. I then used Node.js to compile the Typescipt into Javascript. Finally I used Node.js to run the JavaScript that was compiled. Overall my purpose was to start working with Typescipt and Node.js and to practice what I have learned so far. 
 
 [Software Demo Video](http://youtube.link.goes.here)
 
