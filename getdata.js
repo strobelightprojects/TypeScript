@@ -36,58 +36,69 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.fetchData = void 0;
-var node_fetch_1 = require("node-fetch");
-// An asynchronous function to fetch data from a specified URL
-function fetchData(url) {
-    return __awaiter(this, void 0, void 0, function () {
-        var response, error_1;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    _a.trys.push([0, 2, , 3]);
-                    return [4 /*yield*/, (0, node_fetch_1.default)(url)];
-                case 1:
-                    response = _a.sent();
-                    if (!response.ok) {
-                        // Throw an error for non-200 status codes
-                        throw new Error("HTTP error! Status: ".concat(response.status));
-                    }
-                    return [2 /*return*/, response]; // Return the raw response
-                case 2:
-                    error_1 = _a.sent();
-                    console.error('Error fetching data:', error_1); // Log error message
-                    throw error_1; // Rethrow the error
-                case 3: return [2 /*return*/];
-            }
+// Import the 'node-fetch' 
+Promise.resolve().then(function () { return require('node-fetch'); }).then(function (_a) {
+    var fetch = _a.default;
+    // An asynchronous function to fetch data from a  URL
+    function fetchData(url) {
+        return __awaiter(this, void 0, void 0, function () {
+            var response, error_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, fetch(url)];
+                    case 1:
+                        response = _a.sent();
+                        if (!response.ok) {
+                            // Throw an error for non-200 status codes
+                            throw new Error("HTTP error! Status: ".concat(response.status));
+                        }
+                        return [2 /*return*/, response]; // Return the raw response
+                    case 2:
+                        error_1 = _a.sent();
+                        console.error('Error fetching data:', error_1); // Log error message
+                        throw error_1; // Rethrow the error
+                    case 3: return [2 /*return*/];
+                }
+            });
         });
-    });
-}
-exports.fetchData = fetchData;
-// Example usage of fetchData function
-function displayData() {
-    return __awaiter(this, void 0, void 0, function () {
-        var apiUrl, response, data;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
-                    return [4 /*yield*/, fetchData(apiUrl)];
-                case 1:
-                    response = _a.sent();
-                    if (!response.ok) return [3 /*break*/, 3];
-                    return [4 /*yield*/, response.text()];
-                case 2:
-                    data = _a.sent();
-                    console.log('Fetched data:', data);
-                    return [3 /*break*/, 4];
-                case 3:
-                    console.log('Failed to fetch data:', response.status);
-                    _a.label = 4;
-                case 4: return [2 /*return*/];
-            }
+    }
+    // Example usage of fetchData function
+    function displayData() {
+        return __awaiter(this, void 0, void 0, function () {
+            var apiUrl, response, data, error_2;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        apiUrl = 'https://strobelightprojects.github.io/wdd130/atlantis/index.html';
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 6, , 7]);
+                        return [4 /*yield*/, fetchData(apiUrl)];
+                    case 2:
+                        response = _a.sent();
+                        if (!response.ok) return [3 /*break*/, 4];
+                        return [4 /*yield*/, response.text()];
+                    case 3:
+                        data = _a.sent();
+                        console.log('Fetched data:', data);
+                        return [3 /*break*/, 5];
+                    case 4:
+                        console.log('Failed to fetch data:', response.status);
+                        _a.label = 5;
+                    case 5: return [3 /*break*/, 7];
+                    case 6:
+                        error_2 = _a.sent();
+                        console.error('Error:', error_2);
+                        return [3 /*break*/, 7];
+                    case 7: return [2 /*return*/];
+                }
+            });
         });
-    });
-}
-// Run the example
-displayData();
+    }
+    // Run the example
+    displayData();
+}).catch(function (error) {
+    console.error('Error loading node-fetch:', error);
+});
