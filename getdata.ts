@@ -67,7 +67,7 @@ import('node-fetch').then(({ default: fetch }) => {
         const data5 = await response5.text();
         console.log('Fetched data from fourth URL:', data5); //success
       } else {
-        console.log('Failed to fetch data from fourth URL:', response4.status); //failed 
+        console.log('Failed to fetch data from fourth URL:', response5.status); //failed 
       }
       //6
       const response6 = await fetchData(apiUrl6); // fetching fourth website
@@ -75,7 +75,7 @@ import('node-fetch').then(({ default: fetch }) => {
         const data6 = await response6.text();
         console.log('Fetched data from fourth URL:', data6); //success
       } else {
-        console.log('Failed to fetch data from fourth URL:', response4.status); //failed 
+        console.log('Failed to fetch data from fourth URL:', response6.status); //failed 
       }
 
   

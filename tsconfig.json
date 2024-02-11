@@ -4,6 +4,6 @@
       "module": "CommonJS", //type of module used 
       "outDir": "./dist",  
       "strict": true, 
-      "esModuleInterop": true, // works with module
+      "esModuleInterop": true, // workes with module
     },
   }

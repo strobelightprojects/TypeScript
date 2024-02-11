@@ -137,7 +137,7 @@ Promise.resolve().then(function () { return require('node-fetch'); }).then(funct
                         console.log('Fetched data from fourth URL:', data5); //success
                         return [3 /*break*/, 21];
                     case 20:
-                        console.log('Failed to fetch data from fourth URL:', response4.status); //failed 
+                        console.log('Failed to fetch data from fourth URL:', response5.status); //failed 
                         _a.label = 21;
                     case 21: return [4 /*yield*/, fetchData(apiUrl6)];
                     case 22:
@@ -149,7 +149,7 @@ Promise.resolve().then(function () { return require('node-fetch'); }).then(funct
                         console.log('Fetched data from fourth URL:', data6); //success
                         return [3 /*break*/, 25];
                     case 24:
-                        console.log('Failed to fetch data from fourth URL:', response4.status); //failed 
+                        console.log('Failed to fetch data from fourth URL:', response6.status); //failed 
                         _a.label = 25;
                     case 25: return [3 /*break*/, 27];
                     case 26:
