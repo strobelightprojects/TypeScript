@@ -1,7 +1,7 @@
 {
   "name": "typescript",
   "version": "1.0.0",
-  "description": "{hmm}",
+  "description": "{It created msot of this code by just answearing some questions, I tried To implement Jest but failed misserably but may do so in future so i left it in.}",
   "main": "getdata.ts",
   "scripts": {
     "start": "node getdata.js",

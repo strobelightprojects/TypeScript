@@ -7,10 +7,10 @@ import('node-fetch').then(({ default: fetch }) => {
     try {
       const response = await fetch(url);
       if (!response.ok) {
-        // Throw an error for non-200 status codes
+        // Throw an error
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      return response; // Return the raw response
+      return response; // Return response
     } catch (error) {
       console.error('Error fetching data:', error); // error 
       throw error; 
@@ -19,7 +19,7 @@ import('node-fetch').then(({ default: fetch }) => {
 
   async function displayData() {
     const apiUrl1 = 'https://strobelightprojects.github.io/wdd130/atlantis/index.html';
-    const apiUrl2 = 'https://example.com/another-page.html'; 
+    const apiUrl2 = 'https://strobelightprojects.github.io/wdd130/wwr/site-plan-rafting.html'; 
 
     try {
       // first URL fetch

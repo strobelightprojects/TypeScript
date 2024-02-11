@@ -1,10 +1,9 @@
 {
-    "compilerOptions": {
-      "target": "ESNext",
-      "module": "CommonJS",
-      "outDir": "./dist", 
+    "compilerOptions": { 
+      "target": "ESNext", //what Es is used
+      "module": "CommonJS", //type of module used 
+      "outDir": "./dist",  
       "strict": true, 
-      "esModuleInterop": true, 
+      "esModuleInterop": true, // works with module
     },
   }
-  
